@@ -18,7 +18,7 @@ def run():
     prices_img = requests.get("https://storage.ko-fi.com/cdn/generated/ase8uhaewtvcq/2025-09-11_rest-a65e26ee8ce63adca67cc7cd6fe129e0-jf8atzez.jpg").content
 
     # BlueSkyログイン
-    client.login("metarusan.bsky.social", "pi4w-y47h-cqua-6f3i")
+    client.login(username, password)
 
     # 画像アップロード
     priceblob = client.upload_blob(prices_img)
@@ -40,4 +40,5 @@ def run():
 
 
 if __name__ == "__main__":
+
     run()
