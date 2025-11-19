@@ -1,0 +1,29 @@
+name: Post to Bluesky every 5 minutes
+
+on:
+  schedule:
+    - cron: "0 12 15,30 * *"
+  workflow_dispatch:
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: pip install atproto requests
+
+      - name: Run script
+        env:
+          BSKY_IDENTIFIER_MAIN: ${{ secrets.BSKY_IDENTIFIER_MAIN }}
+          BSKY_APP_PASSWORD_MAIN: ${{ secrets.BSKY_APP_PASSWORD_MAIN }}
+
+        run: |
+          python post_to_bluesky_main.py
