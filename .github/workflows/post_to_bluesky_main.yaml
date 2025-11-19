@@ -1,4 +1,4 @@
-name: Post to Bluesky every 5 minutes
+name: Post to Bluesky every 5 minutes Main
 
 on:
   schedule:
@@ -27,3 +27,4 @@ jobs:
 
         run: |
           python post_to_bluesky_main.py
+
