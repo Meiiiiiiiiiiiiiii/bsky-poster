@@ -7,7 +7,7 @@ def run():
     username = os.environ["BSKY_IDENTIFIER_MAIN"]
     password = os.environ["BSKY_APP_PASSWORD_MAIN"]
 
-   client = Client()
+    client = Client()
     builder = client_utils.TextBuilder()
     builder.text("I am accepting commissions! I also am selling "
         "adoptable ponies! Check out my pinned post or Ko-fi if "
@@ -42,3 +42,4 @@ def run():
 if __name__ == "__main__":
 
     run()
+
