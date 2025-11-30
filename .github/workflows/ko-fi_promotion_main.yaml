@@ -26,6 +26,7 @@ jobs:
           BSKY_APP_PASSWORD_MAIN: ${{secrets.BSKY_APP_PASSWORD_MAIN}}
 
         run: |
-          python post_to_bluesky_main.py
+          python Post_To_Bluesky_Main.py
+
 
 
