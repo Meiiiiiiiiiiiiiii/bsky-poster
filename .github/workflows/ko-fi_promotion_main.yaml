@@ -2,7 +2,7 @@ name: Ko-Fi Promotion Main
 
 on:
   schedule:
-    - cron: "0 12 15,30 * *"
+    - cron: "0 3 15,30 * *"
   workflow_dispatch:
 
 jobs:
@@ -27,6 +27,7 @@ jobs:
 
         run: |
           python post_to_bluesky_main.py
+
 
 
 
