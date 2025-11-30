@@ -1,4 +1,4 @@
-name: Post to Bluesky every 5 minutes Main
+name: Ko-Fi Promotion Main
 
 on:
   schedule:
@@ -22,9 +22,10 @@ jobs:
 
       - name: Run script
         env:
-          BSKY_IDENTIFIER_MAIN: ${{ secrets.BSKY_IDENTIFIER_MAIN }}
-          BSKY_APP_PASSWORD_MAIN: ${{ secrets.BSKY_APP_PASSWORD_MAIN }}
+          BSKY_IDENTIFIER_MAIN: ${{secrets.BSKY_IDENTIFIER_MAIN}}
+          BSKY_APP_PASSWORD_MAIN: ${{secrets.BSKY_APP_PASSWORD_MAIN}}
 
         run: |
           python post_to_bluesky_main.py
+
 
